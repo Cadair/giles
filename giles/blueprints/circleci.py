@@ -1,6 +1,6 @@
 import json
 import requests
-from changebot.github.github_auth import github_request_headers, repo_to_installationid_mapping
+from giles.github.github_auth import github_request_headers, repo_to_installationid_mapping
 
 from flask import Blueprint, request, current_app
 

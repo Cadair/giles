@@ -4,7 +4,7 @@ from flask import Flask
 
 from werkzeug.contrib.fixers import ProxyFix
 
-from changebot.blueprints.circleci import circleci
+from giles.blueprints.circleci import circleci
 
 app = Flask('astropy-bot')
 
