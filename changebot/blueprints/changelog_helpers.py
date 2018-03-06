@@ -51,7 +51,7 @@ def find_prs_in_changelog_by_section(content):
 
 def check_changelog_consistency(repo_handler, pr_handler):
 
-    for filename in ('CHANGES.rst', 'CHANGES', 'CHANGES.md'):
+    for filename in ('CHANGES.rst', 'CHANGES', 'CHANGES.md', 'CHANGELOG.rst', 'CHANGELOG', 'CHANGELOG.md'):
         try:
             changelog = repo_handler.get_file_contents(filename)
         except FileNotFoundError:
