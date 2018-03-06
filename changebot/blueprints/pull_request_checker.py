@@ -102,7 +102,7 @@ def process_changelog_consistency(repository, number, installation):
 
     # Find previous comments by this app
     comment_ids = pr_handler.find_comments(
-        'astropy-bot[bot]', filter_keep=is_changelog_message)
+        'dkistbot[bot]', filter_keep=is_changelog_message)
 
     if len(comment_ids) == 0:
         comment_id = None
@@ -149,11 +149,11 @@ def process_changelog_consistency(repository, number, installation):
                                             return_url=True)
 
     if approve:
-        pr_handler.set_status('success', 'All checks passed', 'astropy-bot',
+        pr_handler.set_status('success', 'All checks passed', 'dkistbot',
                               target_url=comment_url)
     else:
         pr_handler.set_status('failure', 'There were failures in checks - see '
-                              'comments by @astropy-bot above', 'astropy-bot',
+                              'comments by @dkistbot above', 'dkistbot',
                               target_url=comment_url)
 
     return message

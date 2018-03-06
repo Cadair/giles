@@ -86,7 +86,7 @@ def process_pull_requests(repository, installation):
         dt = now - commit_time
 
         if current_app.stale_pull_requests_close and dt > current_app.stale_pull_requests_close_seconds:
-            comment_ids = pr.find_comments('astropy-bot[bot]', filter_keep=is_close_epilogue)
+            comment_ids = pr.find_comments('dkistbot[bot]', filter_keep=is_close_epilogue)
             if not enable_autoclose:
                 print(f'-> Skipping issue {n} (auto-close disabled)')
             elif len(comment_ids) == 0:
@@ -96,7 +96,7 @@ def process_pull_requests(repository, installation):
             else:
                 print(f'-> Skipping issue {n} (already closed)')
         elif dt > current_app.stale_pull_requests_warn_seconds:
-            comment_ids = pr.find_comments('astropy-bot[bot]', filter_keep=is_close_warning)
+            comment_ids = pr.find_comments('dkistbot[bot]', filter_keep=is_close_warning)
             if len(comment_ids) == 0:
                 print(f'-> WARNING issue {n}')
                 pr.submit_comment(PULL_REQUESTS_CLOSE_WARNING.format(pasttime=naturaldelta(dt),
