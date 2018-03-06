@@ -11,6 +11,7 @@ webhooks from circle ci and adding a commit status with a link to the built
 
 ## Usage
 
+Add the following to your circleci config:
 
 
 ## Attribution
