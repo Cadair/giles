@@ -14,7 +14,6 @@ webhooks from circle ci and adding a commit status with a link to the built
 Add the following to your circleci config:
 
 
-
 ## Attribution
 
 All the hard work was done in Astropy bot, this is just a deployment of the bot
