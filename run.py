@@ -14,9 +14,9 @@ app = create_app('giles-dev')
 Configure Plugins
 """
 
-import baldrick.plugins.artifact_checker  # noqa
-import baldrick.plugins.milestone_checker  # noqa
-import baldrick.plugins.towncrier_changelog_checker  # noqa
+import baldrick.plugins.circleci_artifacts  # noqa
+import baldrick.plugins.github_milestones  # noqa
+import baldrick.plugins.github_towncrier_changelog  # noqa
 
 
 # Bind to PORT if defined, otherwise default to 5000.
