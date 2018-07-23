@@ -6,6 +6,8 @@ jobs:
     steps:
       - run: mkdir -p docs/_build/html
       - run: wget http://sunpy.org/index.html -O docs/_build/html/index.html
+      - run: mkdir -p this/is/a/test
+      - run: wget cultofthepartyparrot.com/parrots/hd/parrot.gif -O this/is/a/test/parrot.gif
 
       - store_artifacts:
           path: docs/_build/html
