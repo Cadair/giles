@@ -11,6 +11,8 @@ jobs:
 
       - store_artifacts:
           path: docs/_build/html
+      - store_artifacts:
+          path: this/
 
       - run:
           name: "Built documentation is available at:"
