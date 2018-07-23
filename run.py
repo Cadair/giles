@@ -19,6 +19,12 @@ import baldrick.plugins.github_milestones  # noqa
 import baldrick.plugins.github_towncrier_changelog  # noqa
 
 
+app.circleci_artifacts_default = {app.bot_username: {
+    "url": "html/index.html",
+    "message":
+    "Click details to preview the documentation build"}}
+
+
 # Bind to PORT if defined, otherwise default to 5000.
 port = int(os.environ.get('PORT', 5000))
 app.run(host='0.0.0.0', port=port, debug=False)
