@@ -18,7 +18,7 @@ extensible, if you want extra features it's easy to host your own custom bot.
 To use Giles, go to https://github.com/apps/giles and add the app to your
 repositories.
 
-Then follow the instructions below on how to configure the 
+Then follow the instructions below on how to configure Giles.
 
 
 ## Configuration
