@@ -56,6 +56,7 @@ need the circleci webhook configuration as above.
 To enable checking of milestones add the following to your `pyproject.toml`
 file:
 
+  [ tool.gilesbot ]
     [ tool.gilesbot.pull_requests ]
       enabled = true
     
@@ -71,6 +72,7 @@ documentation](https://baldrick.readthedocs.io/en/latest/plugins.html#github-mil
 To enable Towncrier GitHub checks on your Pull Requests add the following to
 your `pyproject.toml` file:
 
+  [ tool.gilesbot ]
     [ tool.gilesbot.pull_requests ]
       enabled = true
     
