@@ -33,9 +33,9 @@ The CircleCI artifact plugin is enabled by default to post a status for
 a sphinx html build. If you add Giles to a repository and add the webhook to
 the `.circleci/config.yml` file as such:
 
-  notify:
-    webhooks:
-      - url: https://giles.cadair.dev/circleci
+    notify:
+      webhooks:
+        - url: https://giles.cadair.dev/circleci
 
 A status will be posted with a link to your `html/index.html` file.
 
