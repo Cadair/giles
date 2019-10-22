@@ -32,22 +32,23 @@ the repository.
 The CircleCI artifact plugin is enabled by default to post a status for
 a sphinx html build. If you add Giles to a repository and add the webhook to
 the `.circleci/config.yml` file as such:
-
+```
     notify:
       webhooks:
         - url: https://giles.cadair.dev/circleci
+```
 
 A status will be posted with a link to your `html/index.html` file.
 
 ### Custom CircleCI artifacts
 
 To add a custom artifact link add the following to your `pyproject.toml` file:
-
+```
     [ tool.gilesbot ]
       [ tool.gilesbot.circleci_artifacts.checkname ]
         url = "my/artifact/path"
         message = "GitHub Status Message."
-
+```
 You can add as many of these as you wish, change `checkname` for each one. You
 need the circleci webhook configuration as above.
 
@@ -56,12 +57,14 @@ need the circleci webhook configuration as above.
 To enable checking of milestones add the following to your `pyproject.toml`
 file:
 
+```
   [ tool.gilesbot ]
     [ tool.gilesbot.pull_requests ]
       enabled = true
     
     [ tool.gilesbot.milestones ]
       enabled = true
+```
 
 You can customise the behaviour of the checks by following the [Baldrick
 documentation](https://baldrick.readthedocs.io/en/latest/plugins.html#github-milestone-checker).
@@ -71,14 +74,14 @@ documentation](https://baldrick.readthedocs.io/en/latest/plugins.html#github-mil
 
 To enable Towncrier GitHub checks on your Pull Requests add the following to
 your `pyproject.toml` file:
-
+```
   [ tool.gilesbot ]
     [ tool.gilesbot.pull_requests ]
       enabled = true
     
     [ tool.gilesbot.towncrier_changelog ]
       enabled = true
-
+```
 To customise the behaviour follow the [Baldrick
 documentation](https://baldrick.readthedocs.io/en/latest/plugins.html#towncrier-changelog-checker).
 
