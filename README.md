@@ -1,7 +1,7 @@
 # Giles
 
 Giles is a GitHub bot which deploys
-[Baldrick](https://github.com/OpenAstronomy/baldbrick), it has the following
+[Baldrick](https://github.com/OpenAstronomy/baldrick), it has the following
 features:
 
 * Post Statuses for CircleCI artifacts.
@@ -10,7 +10,7 @@ features:
   is present.
 
 
-[Baldrick](https://github.com/OpenAstronomy/Baldrick) is designed to be
+[Baldrick](https://github.com/OpenAstronomy/baldrick) is designed to be
 extensible, if you want extra features it's easy to host your own custom bot.
 
 ## Getting started
