@@ -29,7 +29,7 @@ the repository.
 ### CircleCI Artifact Links
 
 Giles can post GitHub statuses directly linking to artifacts uploaded on CircleCI.
-To enable this add Giles to a repository and configure a webhook in project settings for `https://giles.cadair.dev/circleci` you only need "Workflow Completed" events.
+To enable this add Giles to a repository and configure a webhook in project settings for `https://giles.cadair.dev/circleci/v2` you only need "Workflow Completed" events.
 
 ![CircleCI Webhook config](./circle-ci-webhooks.png)
 
