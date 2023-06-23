@@ -26,21 +26,17 @@ Then follow the instructions below on how to configure Giles.
 Configuration of Giles is done via the `pyproject.toml` file, in the root of
 the repository.
 
+### CircleCI Artifact Links
 
-### Sphinx HTML Build Status
+Giles can post GitHub statuses directly linking to artifacts uploaded on CircleCI.
+To enable this add Giles to a repository and configure a webhook in project settings for `https://giles.cadair.dev/circleci` you only need "Workflow Completed" events.
+
+#### Sphinx HTML Build Status
 
 The CircleCI artifact plugin is enabled by default to post a status for
-a sphinx html build. If you add Giles to a repository and add the webhook to
-the `.circleci/config.yml` file as such:
-```
-    notify:
-      webhooks:
-        - url: https://giles.cadair.dev/circleci
-```
+a sphinx html build. It will look for a file named `html/index.html`.
 
-A status will be posted with a link to your `html/index.html` file.
-
-### Custom CircleCI artifacts
+#### Custom CircleCI artifacts
 
 To add a custom artifact link add the following to your `pyproject.toml` file:
 ```
