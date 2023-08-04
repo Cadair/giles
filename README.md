@@ -29,7 +29,7 @@ the repository.
 ### CircleCI Artifact Links
 
 Giles can post GitHub statuses directly linking to artifacts uploaded on CircleCI.
-To enable this add Giles to a repository and configure a webhook in project settings for `https://giles.cadair.dev/circleci/v2` you only need "Workflow Completed" events.
+To enable this add Giles to a repository and configure a webhook in project settings for `https://giles.cadair.dev/circleci/v2` you only need "Job Completed" events.
 
 ![CircleCI Webhook config](./circle-ci-webhooks.png)
 
@@ -49,6 +49,14 @@ To add a custom artifact link add the following to your `pyproject.toml` file:
 ```
 You can add as many of these as you wish, change `checkname` for each one. You
 need the circleci webhook configuration as above.
+
+If you want to disable the default artifact (html/index.html) you can add:
+
+```
+[ tool.gilesbot ]
+  [ tool.gilesbot.circleci_artifacts.giles ]
+    enabled = False
+```
 
 ### Milestone checks
 
